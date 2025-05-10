@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Conseil & Formation - Reprends confiance en toi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5 0%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4F46E5 0%, #EC4899 100%);
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+            transition: all 0.6s ease;
+        }
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+    </style>
+    <meta name="description" content="COACHING CONFIANCE
+">
+</head>
+<body class="bg-gray-50">
+    <!-- Blobs décoratifs -->
+    <div class="blob gradient-bg w-96 h-96 top-0 left-0"></div>
+    <div class="blob bg-pink-300 w-80 h-80 bottom-0 right-0"></div>
+    <div class="blob bg-indigo-300 w-72 h-72 bottom-1/4 left-1/4"></div>
+
+    <!-- Header -->
+    <header class="relative bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="h-12 w-12 rounded-full gradient-bg flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-xl">NC</span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">NC Conseil &amp; Formation</h1>
+                    <p class="text-sm text-gray-600">Coaching en développement personnel</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#methode" class="text-gray-700 hover:text-indigo-600 transition-colors">Notre méthode</a>
+                <a href="#resultats" class="text-gray-700 hover:text-indigo-600 transition-colors">Résultats</a>
+                <a href="#temoignages" class="text-gray-700 hover:text-indigo-600 transition-colors">Témoignages</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-white pt-20 pb-32 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 z-10">
+                <span class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm mb-6">
+                    Coaching personnalisé
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight playfair">
+                    <span class="gradient-text">Reprends confiance en toi</span> et rayonne pleinement dans ta vie
+                </h1>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    Tu te sens souvent submergé(e) par le doute ? Tu as du mal à t'affirmer ou à croire en tes capacités ? 
+                    Tu n'es pas seul(e), et surtout, ce n'est pas une fatalité. Ensemble, nous pouvons transformer ces 
+                    obstacles en tremplins vers une vie plus épanouie.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="btn-primary gradient-bg text-white font-semibold py-3 px-8 rounded-lg shadow-lg flex items-center justify-center">
+                        <span>Réserver mon appel gratuit</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#methode" class="bg-white border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-md flex items-center justify-center hover:bg-indigo-50 transition-colors">
+                        <span>Découvrir la méthode</span>
+                        <i class="fas fa-chevron-down ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative z-10">
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-pink-200 z-0"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-indigo-200 z-0"></div>
+                    <img src="https://fakeimg.pl/600x500/EEEEEE/909090/?text=Coaching+confiance+en+soi" alt="Coaching confiance en soi" class="rounded-2xl shadow-2xl relative z-10 floating">
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-indigo-300 rounded-full filter blur-3xl opacity-20 z-0"></div>
+            </div>
+        </div>
+        
+        <!-- Stats -->
+        <div class="container mx-auto px-4 mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">200+</h3>
+                    <p class="text-gray-600">Personnes accompagnées</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">97%</h3>
+                    <p class="text-gray-600">Taux de satisfaction</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">5 ans</h3>
+                    <p class="text-gray-600">D'expertise en coaching</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tu n'es pas seul(e) Section -->
+    <section id="problemes" class="py-20 bg-gray-50 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 rounded-full bg-pink-100 text-pink-700 font-medium text-sm mb-4">
+                    Reconnais-tu ces situations ?
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 playfair">
+                    <span class="gradient-text">Tu n'es pas seul(e)</span> à vivre ces difficultés
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    De nombreuses personnes font face aux mêmes défis que toi. Voici quelques situations courantes 
+                    que nous aidons à surmonter chaque jour.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-xl shadow-lg p-8 relative fade-in">
+                    <div class="absolute -top-5 -right-5 w-20 h-20 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-ban text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 mt-4 text-gray-800">La peur de dire non</h3>
+                    <p class="text-gray-600 mb-6">
+                        Tu acceptes souvent des responsabilités qui ne te correspondent pas par crainte de décevoir ou d'être rejeté(e). 
+                        Tu te retrouves débordé(e) et frustré(e) de ne pas pouvoir t'affirmer clairement.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=M" alt="Témoignage" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-gray-500 italic text-sm">"J'avais l'impression d'être le paillasson de tout le monde..."</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-xl shadow-lg p-8 relative fade-in">
+                    <div class="absolute -top-5 -right-5 w-20 h-20 rounded-full bg-pink-100 flex items-center justify-center">
+                        <i class="fas fa-eye text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 mt-4 text-gray-800">La peur du regard des autres</h3>
+                    <p class="text-gray-600 mb-6">
+                        Tu te censures constamment par crainte d'être jugé(e). Prendre la parole en public est une épreuve, 
+                        et tu passes beaucoup de temps à imaginer ce que les autres pensent de toi.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=S" alt="Témoignage" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-gray-500 italic text-sm">"Je me sentais paralysé(e) à l'idée de m'exprimer en réunion..."</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-xl shadow-lg p-8 relative fade-in">
+                    <div class="absolute -top-5 -right-5 w-20 h-20 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-question text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 mt-4 text-gray-800">Le manque de légitimité</h3>
+                    <p class="text-gray-600 mb-6">
+                        Tu doutes constamment de tes compétences malgré tes réussites. Tu as l'impression d'être un(e) imposteur/imposteuse 
+                        et que tu ne mérites pas ta place ou tes succès.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=L" alt="Témoignage" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-gray-500 italic text-sm">"J'attendais qu'on découvre que je n'étais pas à la hauteur..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre méthode Section -->
+    <section id="methode" class="py-20 bg-white relative">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 pr-0 lg:pr-16">
+                    <span class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm mb-4">
+                        Notre approche
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 playfair">
+                        Une <span class="gradient-text">méthode humaine</span> et personnalisée
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Chez NC Conseil &amp; Formation, nous croyons en une approche progressive et bienveillante. 
+                        Nous t'accompagnons pas à pas pour transformer tes doutes en force, dans le respect de ton rythme et de ta personnalité.
+                    </p>
+                    
+                    <div class="space-y-6 fade-in">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-user-friends text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Coaching individuel personnalisé</h3>
+                                <p class="text-gray-600">
+                                    Un accompagnement sur mesure qui s'adapte à tes besoins spécifiques, ton histoire et tes objectifs personnels.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-calendar-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Programme de 3 mois minimum</h3>
+                                <p class="text-gray-600">
+                                    Deux séances par mois pour assurer un suivi régulier et des résultats durables, avec des exercices pratiques entre les sessions.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-video text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Flexibilité des séances</h3>
+                                <p class="text-gray-600">
+                                    Séances en visioconférence ou en présentiel selon tes préférences, pour s'adapter à ton emploi du temps et ta localisation.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-gift text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Appel découverte offert</h3>
+                                <p class="text-gray-600">
+                                    Un premier échange de 30 minutes pour faire connaissance, comprendre tes attentes et vérifier que notre approche te correspond.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <div class="relative">
+                        <div class="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-pink-100 z-0"></div>
+                        <div class="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-indigo-100 z-0"></div>
+                        <img src="https://fakeimg.pl/600x700/EEEEEE/909090/?text=Coaching+personnalisé" alt="Notre méthode de coaching" class="rounded-2xl shadow-2xl relative z-10">
+                        
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-xl shadow-xl z-20 w-64 pulse">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                    <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=NC" alt="Coach" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Nathalie Caron</h4>
+                                    <p class="text-sm text-gray-600">Coach certifiée</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm italic">
+                                "Mon objectif est de t'aider à retrouver ta voix intérieure et à faire briller ta lumière naturelle."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Résultats Section -->
+    <section id="resultats" class="py-20 gradient-bg text-white relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 rounded-full bg-white text-indigo-700 font-medium text-sm mb-4">
+                    Transformations concrètes
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 playfair">
+                    Ce que ça change <span class="text-pink-200">vraiment</span> dans ta vie
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto opacity-90">
+                    Au-delà des mots, voici les transformations réelles que nos clients vivent après notre accompagnement. 
+                    Ces changements s'installent progressivement et durablement.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-volume-up text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Affirmation de soi</h3>
+                    <p class="opacity-90 mb-4">
+                        Tu apprends à exprimer tes besoins et tes limites avec assurance, sans agressivité ni culpabilité.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Dire non sans te justifier</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Exprimer tes désaccords</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Formuler des demandes claires</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Plus d'aisance sociale</h3>
+                    <p class="opacity-90 mb-4">
+                        Tu te sens plus à l'aise dans tes interactions, que ce soit en groupe ou en tête-à-tête.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Prendre la parole en public</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Participer activement aux discussions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Créer des liens authentiques</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Estime de soi renforcée</h3>
+                    <p class="opacity-90 mb-4">
+                        Tu reconnais ta valeur intrinsèque et tu apprends à t'apprécier pour qui tu es vraiment.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Reconnaître tes qualités</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Célébrer tes réussites</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Accepter tes imperfections</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-balance-scale text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Plus de recul</h3>
+                    <p class="opacity-90 mb-4">
+                        Tu développes une perspective plus équilibrée face aux défis et aux critiques.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Gérer les critiques constructivement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Relativiser les échecs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-pink-200 mr-2"></i>
+                            <span>Maintenir ton calme sous pression</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section id="temoignages" class="py-20 bg-gray-50 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 rounded-full bg-pink-100 text-pink-700 font-medium text-sm mb-4">
+                    Ils ont retrouvé confiance
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 playfair">
+                    Ce que nos <span class="gradient-text">clients</span> racontent
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Découvre les expériences authentiques de personnes qui, comme toi, ont décidé de reprendre le contrôle 
+                    de leur confiance en elles.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 relative fade-in">
+                    <div class="absolute -top-5 left-8 text-5xl text-indigo-200">"</div>
+                    <div class="pt-4">
+                        <p class="text-gray-700 mb-6 italic">
+                            Après des années à me sentir illégitime dans mon poste, j'ai enfin compris que je méritais ma place. 
+                            Le coaching m'a aidée à identifier mes forces et à les exprimer sans crainte du jugement. 
+                            Aujourd'hui, je prends la parole en réunion avec assurance.
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=S" alt="Sophie" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Sophie, 34 ans</h4>
+                                <p class="text-sm text-gray-600">Responsable marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 relative fade-in">
+                    <div class="absolute -top-5 left-8 text-5xl text-indigo-200">"</div>
+                    <div class="pt-4">
+                        <p class="text-gray-700 mb-6 italic">
+                            J'étais incapable de dire non, que ce soit au travail ou dans ma vie personnelle. 
+                            Le programme m'a appris à poser des limites saines sans culpabilité. 
+                            Ma qualité de vie s'est transformée et mes relations sont devenues plus authentiques.
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=T" alt="Thomas" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Thomas, 41 ans</h4>
+                                <p class="text-sm text-gray-600">Ingénieur et père de famille</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 relative fade-in">
+                    <div class="absolute -top-5 left-8 text-5xl text-indigo-200">"</div>
+                    <div class="pt-4">
+                        <p class="text-gray-700 mb-6 italic">
+                            Étudiante anxieuse, je me comparais constamment aux autres et doutais de mes capacités. 
+                            Le coaching m'a aidée à reconnaître ma valeur unique et à développer une voix intérieure bienveillante. 
+                            J'ai gagné en sérénité et en performance.
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://fakeimg.pl/100x100/CCCCCC/666666/?text=L" alt="Léa" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Léa, 22 ans</h4>
+                                <p class="text-sm text-gray-600">Étudiante en master</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block gradient-bg text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    Je veux aussi transformer ma vie
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm mb-4">
+                    Questions fréquentes
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 playfair">
+                    Les réponses à tes <span class="gradient-text">interrogations</span>
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Voici les questions les plus courantes sur notre accompagnement. Si tu ne trouves pas ta réponse, 
+                    n'hésite pas à nous contacter.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6 fade-in">
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3">Combien de temps faut-il pour voir des résultats ?</h3>
+                    <p class="text-gray-700">
+                        Les premiers changements sont généralement perceptibles après 3 à 4 séances. Cependant, pour des transformations profondes et durables, 
+                        un accompagnement de 3 mois minimum est recommandé. Chaque personne évolue à son rythme, et nous respectons ton tempo.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3">Quelle est la différence avec une thérapie ?</h3>
+                    <p class="text-gray-700">
+                        Le coaching se concentre sur le présent et l'avenir, avec des objectifs concrets à atteindre. 
+                        Contrairement à la thérapie, nous ne traitons pas les traumatismes profonds ou les troubles psychologiques. 
+                        Nous travaillons sur tes ressources et tes potentiels pour avancer vers tes objectifs.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3">Quels sont les tarifs de l'accompagnement ?</h3>
+                    <p class="text-gray-700">
+                        Nos tarifs varient en fonction de la durée du programme et du format choisi (présentiel ou visio). 
+                        Un programme standard de 3 mois (6 séances) commence à partir de 690€, avec possibilité de paiement en plusieurs fois. 
+                        Nous proposons également des formules sur-mesure adaptées à tes besoins spécifiques.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3">Comment se déroule l'appel découverte gratuit ?</h3>
+                    <p class="text-gray-700">
+                        L'appel dure environ 30 minutes. C'est un moment d'échange où tu peux exprimer tes attentes et poser toutes tes questions. 
+                        De mon côté, j'évalue si je peux t'aider efficacement et je te présente ma méthode. 
+                        Cet appel est sans engagement et te permet de vérifier si le feeling passe entre nous.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="py-20 gradient-bg text-white relative">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800 playfair">
+                            Prêt(e) à retrouver <span class="gradient-text">confiance en toi</span> ?
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Réserve ton appel découverte gratuit de 30 minutes et découvre comment notre méthode personnalisée 
+                            peut t'aider à transformer ta relation avec toi-même.
+                        </p>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Ton prénom</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" placeholder="Prénom">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Ton email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" placeholder="Email">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Ton téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" placeholder="Téléphone">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Ton objectif principal</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" placeholder="Ce que tu souhaites améliorer..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full gradient-bg text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all pulse">
+                                Réserver mon appel gratuit
+                            </button>
+                        </form>
+                    </div>
+                    <div class="md:w-1/2 bg-indigo-50 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="mb-8">
+                            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Engagement de confidentialité</h3>
+                            <p class="text-gray-600">
+                                Toutes nos conversations et les informations que tu partages restent strictement confidentielles.
+                            </p>
+                        </div>
+                        <div class="mb-8">
+                            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-hand-holding-heart text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Approche sans jugement</h3>
+                            <p class="text-gray-600">
+                                Un espace bienveillant où tu peux t'exprimer librement, sans crainte d'être jugé(e).
+                            </p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-certificate text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Coach certifiée</h3>
+                            <p class="text-gray-600">
+                                Nathalie Caron est coach professionnelle certifiée, formée aux techniques de développement personnel les plus efficaces.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 rounded-full gradient-bg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">NC</span>
+                        </div>
+                        <h3 class="text-xl font-bold">NC Conseil &amp; Formation</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Accompagnement personnalisé pour retrouver confiance en soi et s'épanouir pleinement.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#methode" class="text-gray-400 hover:text-white transition-colors">Notre méthode</a></li>
+                        <li><a href="#resultats" class="text-gray-400 hover:text-white transition-colors">Résultats</a></li>
+                        <li><a href="#temoignages" class="text-gray-400 hover:text-white transition-colors">Témoignages</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-indigo-400 mr-2"></i>
+                            <a href="mailto:contact@ncconseil.fr" class="text-gray-400 hover:text-white transition-colors">contact@ncconseil.fr</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-indigo-400 mr-2"></i>
+                            <a href="tel:+33600000000" class="text-gray-400 hover:text-white transition-colors">06 00 00 00 00</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i>
+                            <span class="text-gray-400">Paris et en ligne</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Reçois nos conseils et astuces pour développer ta confiance en toi.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Ton email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
+                        <button type="submit" class="gradient-bg px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2025 NC Conseil &amp; Formation. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Mentions légales</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animations au scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Menu mobile toggle
+            const menuButton = document.querySelector('button.md\\:hidden');
+            const mobileMenu = document.createElement('div');
+            mobileMenu.classList.add('mobile-menu', 'fixed', 'inset-0', 'bg-white', 'z-50', 'flex', 'flex-col', 'items-center', 'justify-center', 'transform', 'translate-x-full', 'transition-transform', 'duration-300');
+            mobileMenu.innerHTML = `
+                <button class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <nav class="flex flex-col space-y-6 text-center">
+                    <a href="#methode" class="text-xl text-gray-700 hover:text-indigo-600 transition-colors">Notre méthode</a>
+                    <a href="#resultats" class="text-xl text-gray-700 hover:text-indigo-600 transition-colors">Résultats</a>
+                    <a href="#temoignages" class="text-xl text-gray-700 hover:text-indigo-600 transition-colors">Témoignages</a>
+                    <a href="#contact" class="text-xl text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+                </nav>
+            `;
+            document.body.appendChild(mobileMenu);
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+            
+            mobileMenu.querySelector('button').addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+            
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
